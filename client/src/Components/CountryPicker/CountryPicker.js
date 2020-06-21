@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { availableContries } from '../../data';
 
 const CountryPicker = ({ selectInputHandler, selectedCountry }) => {
+  const countriesList = availableContries.map(coun => coun.Country);
+  const sortedCountriesList = countriesList.sort();
   return (
     <div>
       <div className='form-group form-inline'>
@@ -11,9 +13,9 @@ const CountryPicker = ({ selectInputHandler, selectedCountry }) => {
           className='form-control m-auto'
           onChange={event => selectInputHandler(event)}
         >
-          {availableContries.map(country => (
-            <option value={country.Country} key={country.Country}>
-              {country.Country}
+          {sortedCountriesList.map(country => (
+            <option value={country} key={country}>
+              {country}
             </option>
           ))}
         </select>

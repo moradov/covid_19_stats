@@ -18,7 +18,7 @@ const Cards = ({ selectedCountryLatestData, dataNotFound }) => {
                     )}
                   </p>
                   <small className='text-muted'>
-                    {selectedCountryLatestData.Date}
+                    {new Date(selectedCountryLatestData.Date).toDateString()}
                   </small>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Cards = ({ selectedCountryLatestData, dataNotFound }) => {
                     )}
                   </p>
                   <small className='text-muted'>
-                    {selectedCountryLatestData.Date}
+                    {new Date(selectedCountryLatestData.Date).toDateString()}
                   </small>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const Cards = ({ selectedCountryLatestData, dataNotFound }) => {
                     )}
                   </p>
                   <small className='text-muted'>
-                    {selectedCountryLatestData.Date}
+                    {new Date(selectedCountryLatestData.Date).toDateString()}
                   </small>
                 </div>
               </div>
