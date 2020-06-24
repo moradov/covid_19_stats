@@ -53,7 +53,6 @@ class App extends Component {
     axios.get(`/api/daily_data/${contryName}`).then(res => {
       this.setState({ selectedCountryDailyData: res.data });
     });
-    // .catch(err => console.log(err));
   };
 
   componentDidMount() {

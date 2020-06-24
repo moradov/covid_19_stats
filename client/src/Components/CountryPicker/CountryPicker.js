@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { availableContries } from '../../data';
 
 const CountryPicker = ({ selectInputHandler, selectedCountry }) => {
+  //sorting the countries data
   const countriesList = availableContries.map(coun => coun.Country);
   const sortedCountriesList = countriesList.sort();
   return (
